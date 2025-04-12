@@ -29,5 +29,12 @@ namespace Practicas
             Frm2.MdiParent = this;
             Frm2.Show();
         }
+
+        private void practica3ComponenetesYLibreriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Practica3 Frm3 = new Practica3();
+            Frm3.MdiParent = this;
+            Frm3.Show();
+        }
     }
 }

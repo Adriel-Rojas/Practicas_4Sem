@@ -32,6 +32,7 @@
             this.practicasSemestre4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica1GestionDeContactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.practica3ComponenetesYLibreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // 
             this.practicasSemestre4ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.practica1GestionDeContactosToolStripMenuItem,
-            this.practica2ToolStripMenuItem});
+            this.practica2ToolStripMenuItem,
+            this.practica3ComponenetesYLibreriasToolStripMenuItem});
             this.practicasSemestre4ToolStripMenuItem.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.practicasSemestre4ToolStripMenuItem.Name = "practicasSemestre4ToolStripMenuItem";
             this.practicasSemestre4ToolStripMenuItem.Size = new System.Drawing.Size(258, 31);
@@ -59,16 +61,23 @@
             // practica1GestionDeContactosToolStripMenuItem
             // 
             this.practica1GestionDeContactosToolStripMenuItem.Name = "practica1GestionDeContactosToolStripMenuItem";
-            this.practica1GestionDeContactosToolStripMenuItem.Size = new System.Drawing.Size(510, 32);
+            this.practica1GestionDeContactosToolStripMenuItem.Size = new System.Drawing.Size(513, 32);
             this.practica1GestionDeContactosToolStripMenuItem.Text = "Practica 1 (Gestion de Contactos)";
             this.practica1GestionDeContactosToolStripMenuItem.Click += new System.EventHandler(this.practica1GestionDeContactosToolStripMenuItem_Click);
             // 
             // practica2ToolStripMenuItem
             // 
             this.practica2ToolStripMenuItem.Name = "practica2ToolStripMenuItem";
-            this.practica2ToolStripMenuItem.Size = new System.Drawing.Size(510, 32);
+            this.practica2ToolStripMenuItem.Size = new System.Drawing.Size(513, 32);
             this.practica2ToolStripMenuItem.Text = "Practica 2 (Interfaz Grafica Dinamica)";
             this.practica2ToolStripMenuItem.Click += new System.EventHandler(this.practica2ToolStripMenuItem_Click);
+            // 
+            // practica3ComponenetesYLibreriasToolStripMenuItem
+            // 
+            this.practica3ComponenetesYLibreriasToolStripMenuItem.Name = "practica3ComponenetesYLibreriasToolStripMenuItem";
+            this.practica3ComponenetesYLibreriasToolStripMenuItem.Size = new System.Drawing.Size(513, 32);
+            this.practica3ComponenetesYLibreriasToolStripMenuItem.Text = "Practica 3 (Componenetes y librerias)";
+            this.practica3ComponenetesYLibreriasToolStripMenuItem.Click += new System.EventHandler(this.practica3ComponenetesYLibreriasToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -94,5 +103,6 @@
         private System.Windows.Forms.ToolStripMenuItem practicasSemestre4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem practica1GestionDeContactosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem practica2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem practica3ComponenetesYLibreriasToolStripMenuItem;
     }
 }
