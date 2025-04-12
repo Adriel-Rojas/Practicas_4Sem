@@ -51,5 +51,11 @@ namespace Practicas
             Frm3.MdiParent = this;
             Frm3.Show();
         }
+
+        private void practica4ConcurrenciaNumerosPrimosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Frm4 = new Practica4();
+            
+        }
     }
 }
