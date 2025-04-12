@@ -77,10 +77,10 @@
     <Compile Include="Practica 2\Practica2.Designer.cs">
       <DependentUpon>Practica2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Practica3.cs">
+    <Compile Include="Practica 3\Practica3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Practica3.Designer.cs">
+    <Compile Include="Practica 3\Practica3.Designer.cs">
       <DependentUpon>Practica3.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -94,7 +94,7 @@
     <EmbeddedResource Include="Practica 2\Practica2.resx">
       <DependentUpon>Practica2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Practica3.resx">
+    <EmbeddedResource Include="Practica 3\Practica3.resx">
       <DependentUpon>Practica3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
