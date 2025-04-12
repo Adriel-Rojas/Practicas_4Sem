@@ -19,18 +19,33 @@ namespace Practicas
 
         private void practica1GestionDeContactosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void practica2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void practica3ComponenetesYLibreriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void practica1GestionDeContactosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             GestCont Frm = new GestCont();
             Frm.Show();
         }
 
-        private void practica2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void practica2InterfazGraficaDinamicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Practica2 Frm2 = new Practica2();
             Frm2.MdiParent = this;
             Frm2.Show();
         }
 
-        private void practica3ComponenetesYLibreriasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void practica3ComponentesYLibreriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Practica3 Frm3 = new Practica3();
             Frm3.MdiParent = this;
