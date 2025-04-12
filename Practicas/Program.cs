@@ -16,7 +16,7 @@ namespace Practicas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestCont());
+            Application.Run(new MenuPrincipal());
         }
     }
 }
