@@ -31,12 +31,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.practicasSemestre4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uNIDAD1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uNIDAD2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica1GestionDeContactosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.practica2InterfazGraficaDinamicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uNIDAD2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica3ComponentesYLibreriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uNIDAD3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica4ConcurrenciaNumerosPrimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uNIDAD4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.practicaAccesoABaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,8 @@
             this.practicasSemestre4ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uNIDAD1ToolStripMenuItem,
             this.uNIDAD2ToolStripMenuItem,
-            this.uNIDAD3ToolStripMenuItem});
+            this.uNIDAD3ToolStripMenuItem,
+            this.uNIDAD4ToolStripMenuItem});
             this.practicasSemestre4ToolStripMenuItem.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.practicasSemestre4ToolStripMenuItem.Name = "practicasSemestre4ToolStripMenuItem";
             this.practicasSemestre4ToolStripMenuItem.Size = new System.Drawing.Size(258, 31);
@@ -68,16 +71,8 @@
             this.practica1GestionDeContactosToolStripMenuItem1,
             this.practica2InterfazGraficaDinamicaToolStripMenuItem});
             this.uNIDAD1ToolStripMenuItem.Name = "uNIDAD1ToolStripMenuItem";
-            this.uNIDAD1ToolStripMenuItem.Size = new System.Drawing.Size(513, 32);
+            this.uNIDAD1ToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.uNIDAD1ToolStripMenuItem.Text = "UNIDAD 1";
-            // 
-            // uNIDAD2ToolStripMenuItem
-            // 
-            this.uNIDAD2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.practica3ComponentesYLibreriasToolStripMenuItem});
-            this.uNIDAD2ToolStripMenuItem.Name = "uNIDAD2ToolStripMenuItem";
-            this.uNIDAD2ToolStripMenuItem.Size = new System.Drawing.Size(513, 32);
-            this.uNIDAD2ToolStripMenuItem.Text = "UNIDAD 2";
             // 
             // practica1GestionDeContactosToolStripMenuItem1
             // 
@@ -92,6 +87,14 @@
             this.practica2InterfazGraficaDinamicaToolStripMenuItem.Size = new System.Drawing.Size(510, 32);
             this.practica2InterfazGraficaDinamicaToolStripMenuItem.Text = "Practica 2 (Interfaz Grafica Dinamica)";
             this.practica2InterfazGraficaDinamicaToolStripMenuItem.Click += new System.EventHandler(this.practica2InterfazGraficaDinamicaToolStripMenuItem_Click);
+            // 
+            // uNIDAD2ToolStripMenuItem
+            // 
+            this.uNIDAD2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.practica3ComponentesYLibreriasToolStripMenuItem});
+            this.uNIDAD2ToolStripMenuItem.Name = "uNIDAD2ToolStripMenuItem";
+            this.uNIDAD2ToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.uNIDAD2ToolStripMenuItem.Text = "UNIDAD 2";
             // 
             // practica3ComponentesYLibreriasToolStripMenuItem
             // 
@@ -114,6 +117,21 @@
             this.practica4ConcurrenciaNumerosPrimosToolStripMenuItem.Size = new System.Drawing.Size(578, 32);
             this.practica4ConcurrenciaNumerosPrimosToolStripMenuItem.Text = "Practica 4 (Concurrencia. Numeros Primos)";
             this.practica4ConcurrenciaNumerosPrimosToolStripMenuItem.Click += new System.EventHandler(this.practica4ConcurrenciaNumerosPrimosToolStripMenuItem_Click);
+            // 
+            // uNIDAD4ToolStripMenuItem
+            // 
+            this.uNIDAD4ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.practicaAccesoABaseDeDatosToolStripMenuItem});
+            this.uNIDAD4ToolStripMenuItem.Name = "uNIDAD4ToolStripMenuItem";
+            this.uNIDAD4ToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.uNIDAD4ToolStripMenuItem.Text = "UNIDAD 4";
+            // 
+            // practicaAccesoABaseDeDatosToolStripMenuItem
+            // 
+            this.practicaAccesoABaseDeDatosToolStripMenuItem.Name = "practicaAccesoABaseDeDatosToolStripMenuItem";
+            this.practicaAccesoABaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(468, 32);
+            this.practicaAccesoABaseDeDatosToolStripMenuItem.Text = "Practica. Acceso a Base de Datos";
+            this.practicaAccesoABaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.practicaAccesoABaseDeDatosToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -144,5 +162,7 @@
         private System.Windows.Forms.ToolStripMenuItem practica3ComponentesYLibreriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uNIDAD3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem practica4ConcurrenciaNumerosPrimosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uNIDAD4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem practicaAccesoABaseDeDatosToolStripMenuItem;
     }
 }

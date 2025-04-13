@@ -57,5 +57,12 @@ namespace Practicas
             // Frm4 = new Practica4();
             
         }
+
+        private void practicaAccesoABaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BDsql Frm5 = new BDsql();
+            Frm5.MdiParent = this;
+            Frm5.Show();
+        }
     }
 }

@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practica Acceso BD\BDsql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practica Acceso BD\BDsql.Designer.cs">
+      <DependentUpon>BDsql.cs</DependentUpon>
+    </Compile>
     <Compile Include="Practica 2\FormImagenGran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Practica Acceso BD\BDsql.resx">
+      <DependentUpon>BDsql.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Practica 1\GestCont.resx">
       <DependentUpon>GestCont.cs</DependentUpon>
     </EmbeddedResource>
