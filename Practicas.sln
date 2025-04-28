@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practicas", "Practicas\Practicas.csproj", "{35869A5D-3AEC-4489-B27A-34C3BD6207DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaPersonal", "AgendaPersonal\AgendaPersonal.csproj", "{2CB26B09-612F-4395-A385-26785A842951}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{35869A5D-3AEC-4489-B27A-34C3BD6207DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35869A5D-3AEC-4489-B27A-34C3BD6207DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35869A5D-3AEC-4489-B27A-34C3BD6207DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB26B09-612F-4395-A385-26785A842951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB26B09-612F-4395-A385-26785A842951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB26B09-612F-4395-A385-26785A842951}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2CB26B09-612F-4395-A385-26785A842951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB26B09-612F-4395-A385-26785A842951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB26B09-612F-4395-A385-26785A842951}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

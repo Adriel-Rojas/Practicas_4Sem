@@ -60,9 +60,26 @@ namespace Practicas
 
         private void practicaAccesoABaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void uNIDAD3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bDSQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             BDsql Frm5 = new BDsql();
             Frm5.MdiParent = this;
             Frm5.Show();
+        }
+
+        private void bDMySQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FBDMySQL Frm6 = new FBDMySQL();
+            Frm6.MdiParent = this;
+            Frm6.Show();
         }
     }
 }
