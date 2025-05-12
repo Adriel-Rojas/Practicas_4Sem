@@ -9,7 +9,7 @@
                Padding="0"
                Background="#1A1A1A"
                Margin="30">
-            <AbsoluteLayout HeightRequest="400">
+            <AbsoluteLayout HeightRequest="500">
 
                 <Label Text="Configuración" FontSize="28"
                        FontAttributes="Bold"
@@ -17,7 +17,7 @@
                        AbsoluteLayout.LayoutBounds="0.5,0.1,-1,-1"
                        AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-                <Switch AbsoluteLayout.LayoutBounds="0.8,0.4,-1,-1"
+                <Switch AbsoluteLayout.LayoutBounds="0.8,0.3,-1,-1"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         OnColor="White"
                         ThumbColor="DimGray"/>
@@ -25,7 +25,7 @@
                 <Label Text="Activar Notificaciones"
                        FontSize="18"
                        TextColor="White"
-                       AbsoluteLayout.LayoutBounds="0.2,0.4,-1,-1"
+                       AbsoluteLayout.LayoutBounds="0.2,0.35,-1,-1"
                        AbsoluteLayout.LayoutFlags="PositionProportional" />
 
                 <Button Text="Cambiar Tema"
@@ -36,7 +36,7 @@
                         CornerRadius="50"
                         HeightRequest="50"
                         WidthRequest="200"
-                        AbsoluteLayout.LayoutBounds="0.5,0.8,-1,-1"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
                         AbsoluteLayout.LayoutFlags="PositionProportional" />
 
                 <Button Text="Cerrar Sesion"
