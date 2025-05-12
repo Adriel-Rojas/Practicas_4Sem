@@ -1,4 +1,10 @@
-﻿namespace AgendaPersonal
+﻿#if __ANDROID__
+using Android.Content.Res;
+
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+
+#endif
+namespace AgendaPersonal
 {
     public partial class App : Application
     {
@@ -7,6 +13,14 @@
             InitializeComponent();
 
             MainPage = new AppShell();
+            //MainPage = new NavigationPage(new MainPage());
+
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderLine", (handler, view) =>
+            {
+#if __ANDROID__
+                (handler.PlatformView as Android.Views.View).SetBackgroundColor(Microsoft.Maui.Graphics.Colors.Transparent.ToAndroid());
+#endif
+            });
         }
     }
 }
