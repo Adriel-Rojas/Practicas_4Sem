@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace AgendaPersonal.Views;
 
 public partial class LoginPage : ContentPage
@@ -14,27 +16,19 @@ public partial class LoginPage : ContentPage
 
     private async void TapGestureRecognizerPwd_Tapped(object sender, TappedEventArgs e)
     {
-        //Label Reg = (sender as Label);
-        //var Msg = Reg.FormattedText.Spans[1].Text;
-        //var customerName = (sender as Label).Text;
-        //DisplayAlert("Recuperar Password", $"Name : {Msg}", "ok");
-
-        await Navigation.PushAsync(new RecuperarPage());
+        await Shell.Current.GoToAsync("recuperar");
     }
     private async void TapGestureRecognizerReg_Tapped(object sender, TappedEventArgs e)
     {
-        //Label Reg = (sender as Label);
-        //var Msg = Reg.FormattedText.Spans[0].Text;
-        //var customerName = (sender as Label).Text;
-        //DisplayAlert("Registrar Usuario", $"Name : {Msg}", "ok");
-
-        await Navigation.PushAsync(new RegistroPage());
+        await Shell.Current.GoToAsync("registro");
     }
 
     private async void LoginButton_Clicked(object sender, EventArgs e)
     {
         if (IsCredentialCorrect(Username.Text, Password.Text))
         {
+            Username.Text = string.Empty;
+            Password.Text = string.Empty;
             Preferences.Set("UsuarioActual", Username.Text.Trim());
             await SecureStorage.SetAsync("hasAuth", "true");
             await Shell.Current.GoToAsync("///main");
@@ -42,8 +36,20 @@ public partial class LoginPage : ContentPage
         else
         {
             Preferences.Remove("UsuarioActual");
-            await DisplayAlert("Login failed", "Username or password if invalid", "Try again");
+            await DisplayAlert("Acceso fallido", "Usuario o contraseña invalido", "Intente otra vez");
         }
+    }
+
+    //Para que no aparezca menu de 3 rayas
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        Shell.Current.FlyoutBehavior = FlyoutBehavior.Disabled;
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
     }
 
 

@@ -5,13 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AgendaPersonal"
     xmlns:views="clr-namespace:AgendaPersonal.Views"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="AgendaPersonal">
-
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
 
     <!--Loading Page-->
     <ShellContent
@@ -21,25 +16,26 @@ Route="loading" />
 
     <!--Login Page-->
     <ShellContent 
-Title="Login" 
+Title="login"
 ContentTemplate="{DataTemplate views:LoginPage}"
 Route="login"/>
-    <!--Main Page-->
-    <TabBar>
-        <Tab Title="Home" Icon="house_door_fill.svg">
-            <ShellContent
-        Icon="house_door_fill.svg"
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="main" />
 
-        </Tab>
-        <!--<Tab Title="Settings" Icon="gear_fill.svg">
+
+    <ShellItem Title="Inicio">
         <ShellContent
-        Icon="house_door_fill.svg"
-Title="Settings"
-ContentTemplate="{DataTemplate views:SettingsPage}"
-Route="settings" />
-    </Tab>-->
-    </TabBar>
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Route="main" 
+        />
+    </ShellItem>
+
+    <ShellItem Title="Configuracion">
+        <ShellContent
+            ContentTemplate="{DataTemplate views:ConfiguracionPage}"
+            Route="configuracion"/>
+    </ShellItem>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate views:ContactosPage}"
+        Route="contactos"/>
+    
 </Shell>

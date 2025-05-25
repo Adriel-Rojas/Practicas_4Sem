@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaPersonal.Views.RegistroPage"
+             Title="Registro">
+    <VerticalStackLayout>
+        <Label 
+    Text="Registro" FontSize="30"
+    TextColor="SlateBlue"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" />
+
+        <FlexLayout Direction="Column" AlignItems="Stretch"
+            JustifyContent="Center" Padding="20">
+
+            <Entry Placeholder="Nombre" Margin="0,0,0,10" />
+            <Entry Placeholder="Correo" Margin="0,0,0,10"/>
+            <Entry Placeholder="Contraseña" Margin="0,0,0,20"/>
+
+            <Button Text="Guardar" WidthRequest="300"
+            Background="SlateBlue"
+            TextColor="White"
+            FontAttributes="Bold"
+            FontSize="18"
+            CornerRadius="15"
+            Margin="6,10,0,0"/>
+
+        </FlexLayout>
+    </VerticalStackLayout>
+</ContentPage>

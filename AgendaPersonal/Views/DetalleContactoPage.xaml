@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaPersonal.Views.DetalleContactoPage"
+             Title="Detalle Contacto">
+
+    <VerticalStackLayout>
+
+        <FlexLayout Direction="Column" AlignItems="Stretch"
+        JustifyContent="Center" Padding="20">
+
+            <Entry x:Name="nombreEntry" Placeholder="Nombre"
+       Margin="0,0,0,10"/>
+            <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone"
+       Margin="0,0,0,10"/>
+            <Entry x:Name="correoEntry" Placeholder="Correo Electrónico" Keyboard="Email"
+       Margin="0,0,0,10"/>
+
+            <Button Text="Guardar Contacto" Clicked="OnGuardarClicked"
+        WidthRequest="300"
+        Background="SlateBlue"
+        TextColor="White"
+        FontAttributes="Bold"
+        FontSize="18"
+        CornerRadius="15"
+        Margin="6,10,0,0"/>
+
+        </FlexLayout>
+    </VerticalStackLayout>
+
+</ContentPage>

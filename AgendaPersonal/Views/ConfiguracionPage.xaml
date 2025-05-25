@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaPersonal.Views.ConfiguracionPage"
+             Title="Configuracion">
+    <VerticalStackLayout>
+        <Frame CornerRadius="30"
+       HasShadow="True"
+       Padding="0"
+       Background="Gainsboro"
+       Margin="30">
+            <AbsoluteLayout HeightRequest="500">
+
+                <Label Text="Configuración" FontSize="28"
+           FontAttributes="Bold"
+           TextColor="SlateBlue"
+            AbsoluteLayout.LayoutBounds="0.5,0.05,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+                <Label Text="Tema:" FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0.1,0.20,-1,-1"
+               FontSize="18"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <HorizontalStackLayout AbsoluteLayout.LayoutBounds="0.9,0.18,-1,-1"
+                               AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Label Text="Claro" VerticalOptions="Center"/>
+                    <Switch x:Name="temaSwitch" Toggled="OnTemaToggled" />
+                    <Label Text="Oscuro" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+                <Label Text="Activar Notificaciones" FontAttributes="Bold"
+           FontSize="18"
+            AbsoluteLayout.LayoutBounds="0.1,0.35,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional" />
+                <Switch x:Name="notificaciones"
+AbsoluteLayout.LayoutBounds="0.8,0.34,-1,-1"
+AbsoluteLayout.LayoutFlags="PositionProportional"
+/>
+
+                <Label Text="Idioma:" FontAttributes="Bold"
+               FontSize="18"
+               AbsoluteLayout.LayoutBounds="0.1,0.50,-1,-1"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <Picker x:Name="idiomaPicker" SelectedIndexChanged="OnIdiomaChanged"
+                AbsoluteLayout.LayoutBounds="0.8,0.50,-1,-1"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Picker.Items>
+                        <x:String>es</x:String>
+                        <x:String>en</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label x:Name="lblEstado" Text="Cambios guardados" IsVisible="False" TextColor="Green" FontAttributes="Italic"
+               AbsoluteLayout.LayoutBounds="0.5,0.6,-1,-1"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Button Text="Cerrar Sesion"
+            Background="DarkRed"
+            TextColor="White"
+            FontAttributes="Bold"
+            FontSize="Large"
+            CornerRadius="50"
+            HeightRequest="50"
+            WidthRequest="200"
+            AbsoluteLayout.LayoutBounds="0.5,0.8,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+                Clicked="OnCerrarSesionClicked"/>
+
+            </AbsoluteLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+    
+</ContentPage>
