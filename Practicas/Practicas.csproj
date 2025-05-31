@@ -105,6 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practica 4\HilosConc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Practica 4\HilosConc.Designer.cs">
+      <DependentUpon>HilosConc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Practica Acceso BD\FBDMySQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Practica 4\HilosConc.resx">
+      <DependentUpon>HilosConc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Practica Acceso BD\BDsql.resx">
       <DependentUpon>BDsql.cs</DependentUpon>
     </EmbeddedResource>

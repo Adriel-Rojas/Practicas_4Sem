@@ -353,5 +353,10 @@ namespace Practicas
                 MessageBox.Show("Error en el sistema.");
             }
         }
+
+        private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

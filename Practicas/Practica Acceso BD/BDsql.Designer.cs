@@ -179,6 +179,7 @@
             this.dgvAlumnos.RowTemplate.Height = 24;
             this.dgvAlumnos.Size = new System.Drawing.Size(759, 237);
             this.dgvAlumnos.TabIndex = 13;
+            this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellContentClick);
             // 
             // BDsql
             // 

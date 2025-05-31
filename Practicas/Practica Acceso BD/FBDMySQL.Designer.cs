@@ -87,6 +87,7 @@
             this.btnCrearTabla.TabIndex = 23;
             this.btnCrearTabla.Text = "Crear Tabla";
             this.btnCrearTabla.UseVisualStyleBackColor = true;
+            this.btnCrearTabla.Click += new System.EventHandler(this.btnCrearTabla_Click);
             // 
             // btnCrearBD
             // 
@@ -96,6 +97,7 @@
             this.btnCrearBD.TabIndex = 22;
             this.btnCrearBD.Text = "Crear BD";
             this.btnCrearBD.UseVisualStyleBackColor = true;
+            this.btnCrearBD.Click += new System.EventHandler(this.btnCrearBD_Click_1);
             // 
             // btnRefrescar
             // 
@@ -105,6 +107,7 @@
             this.btnRefrescar.TabIndex = 21;
             this.btnRefrescar.Text = "Refrescar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
             // btnBuscar
             // 
@@ -114,6 +117,7 @@
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // btnBorrar
             // 
@@ -123,6 +127,7 @@
             this.btnBorrar.TabIndex = 19;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click_1);
             // 
             // btnActualizar
             // 
@@ -132,6 +137,7 @@
             this.btnActualizar.TabIndex = 18;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click_1);
             // 
             // btnInsertar
             // 
@@ -141,6 +147,7 @@
             this.btnInsertar.TabIndex = 17;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click_1);
             // 
             // label3
             // 
@@ -193,6 +200,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FBDMySQL";
             this.Text = "FBDMySQL";
+            this.Load += new System.EventHandler(this.FBDMySQL_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

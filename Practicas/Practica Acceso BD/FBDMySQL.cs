@@ -18,7 +18,7 @@ namespace Practicas
         private string Servidor = "localhost";
         private string Basedatos = "ESCOLAR";
         private string UsuarioId = "root";
-        private string Password = "";
+        private string Password = "Adriel26";
         public FBDMySQL()
         {
             InitializeComponent();
@@ -76,6 +76,46 @@ namespace Practicas
 
         private void btnCrearBD_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnCreaTabla_Click(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FBDMySQL_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnCrearBD_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 string strConn = $"Server={Servidor};" +
@@ -87,12 +127,19 @@ namespace Practicas
                 using (MySqlConnection conn = new MySqlConnection(strConn))
                 {
                     //SqlConnection conn = new SqlConnection(strConn);
-                    conn.Open();
+                    //conn.Open();
 
-                    MySqlCommand cmd = new MySqlCommand();
-                    cmd.Connection = conn;
-                    cmd.CommandText = "CREATE DATABASE ESCOLAR";
+                    //MySqlCommand cmd = new MySqlCommand();
+                    //cmd.Connection = conn;
+                    //cmd.CommandText = "CREATE DATABASE ESCOLAR";
+                    //cmd.ExecuteNonQuery();
+
+                    conn.Open();
+                    MessageBox.Show("Conexion al servidor establecida correctamente");
+
+                    MySqlCommand cmd = new MySqlCommand("CREATE DATABASE IF NOT EXISTS ESCOLAR", conn);//Se creara una base de datos solo si no esta creada escolar
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Base de datos 'ESCOLAR' creada o ya existente.");
                 }
 
             }
@@ -106,13 +153,13 @@ namespace Practicas
             }
         }
 
-        private void btnCreaTabla_Click(object sender, EventArgs e)
+        private void btnCrearTabla_Click(object sender, EventArgs e)
         {
             EjecutaComando("CREATE TABLE " +
                     "Alumnos (NControl varchar(10), nombre varchar(50), carrera int)");
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void btnInsertar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -132,7 +179,9 @@ namespace Practicas
                     // Verificar si el numero de control ya existe
                     string consultaVerificar = "SELECT COUNT(*) FROM Alumnos WHERE NControl = '" + txtNoControl.Text + "'";
                     MySqlCommand cmdVerificar = new MySqlCommand(consultaVerificar, conn);
-                    int existe = (int)cmdVerificar.ExecuteScalar();
+                    //int existe = (int)cmdVerificar.ExecuteScalar();
+                    int existe = Convert.ToInt32(cmdVerificar.ExecuteScalar());//Convierte el dato ingresado a entero
+
 
                     if (existe > 0)
                     {
@@ -158,11 +207,11 @@ namespace Practicas
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Error en el sistema");
+                MessageBox.Show("Error en el sistema: " + Ex.Message);
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -181,7 +230,8 @@ namespace Practicas
                     // Verificar si el registro existe antes de actualizarlo
                     string consultaVerificar = "SELECT COUNT(*) FROM Alumnos WHERE NControl = '" + txtNoControl.Text + "'";
                     MySqlCommand cmdVerificar = new MySqlCommand(consultaVerificar, conn);
-                    int existe = (int)cmdVerificar.ExecuteScalar();
+                    //int existe = (int)cmdVerificar.ExecuteScalar();
+                    int existe = Convert.ToInt32(cmdVerificar.ExecuteScalar());
 
                     if (existe == 0)
                     {
@@ -220,7 +270,7 @@ namespace Practicas
             }
         }
 
-        private void btnBorrar_Click(object sender, EventArgs e)
+        private void btnBorrar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -237,11 +287,12 @@ namespace Practicas
                     // Verificar si el registro existe antes de intentar borrarlo
                     string consultaVerificar = "SELECT COUNT(*) FROM Alumnos WHERE NControl = '" + txtNoControl.Text + "'";
                     MySqlCommand cmdVerificar = new MySqlCommand(consultaVerificar, conn);
-                    int existe = (int)cmdVerificar.ExecuteScalar();
+                    //int existe = (int)cmdVerificar.ExecuteScalar();
+                    int existe = Convert.ToInt32(cmdVerificar.ExecuteScalar());
 
                     if (existe == 0)
                     {
-                        MessageBox.Show("El número de control no existe. No se puede borrar.");
+                        MessageBox.Show("El numero de control no existe. No se puede borrar.");
                         conn.Close();
                         return;
                     }
@@ -259,7 +310,7 @@ namespace Practicas
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, ingrese un número de control.");
+                    MessageBox.Show("Por favor, ingrese un numero de control.");
                 }
             }
             catch (MySqlException Ex)
@@ -272,7 +323,7 @@ namespace Practicas
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -298,7 +349,7 @@ namespace Practicas
                     }
                     else
                     {
-                        MessageBox.Show("No se encontró el alumno con ese número de control.");
+                        MessageBox.Show("No se encontró el alumno con ese numero de control.");
                     }
 
                     reader.Close();
@@ -306,7 +357,7 @@ namespace Practicas
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, ingrese un número de control para buscar.");
+                    MessageBox.Show("Por favor, ingrese un numero de control para buscar.");
                 }
             }
             catch (MySqlException Ex)
@@ -319,12 +370,12 @@ namespace Practicas
             }
         }
 
-        private void btnRefrescar_Click(object sender, EventArgs e)
+        private void FBDMySQL_Load_1(object sender, EventArgs e)
         {
             llenarGrid();
         }
 
-        private void FBDMySQL_Load(object sender, EventArgs e)
+        private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
             llenarGrid();
         }

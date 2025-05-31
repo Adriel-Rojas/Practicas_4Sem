@@ -61,9 +61,9 @@ namespace Practicas
             this.Controls.Add(btnLimpiarImagenes);
             ;
             flowLayoutPanel = new FlowLayoutPanel();
-            flowLayoutPanel.Dock = DockStyle.Bottom;
+            //flowLayoutPanel.Dock = DockStyle.Bottom;
             flowLayoutPanel.AutoScroll = true;
-            flowLayoutPanel.Size = new Size(760, 400);
+            flowLayoutPanel.Size = new Size(1500, 650);
             flowLayoutPanel.Location = new Point(20, 80);
             this.Controls.Add(flowLayoutPanel);
         }
@@ -123,7 +123,7 @@ namespace Practicas
         {
             if (imagenes.Count == 0)
             {
-                MessageBox.Show("No hay imágenes disponibles. Asegúrate de seleccionar una carpeta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay imagenes disponibles. Asegúrate de seleccionar una carpeta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -150,8 +150,13 @@ namespace Practicas
 
         private void BtnSeleccionarCarpeta_Click(object sender, EventArgs e)
         {
+
             using (FolderBrowserDialog dialog = new FolderBrowserDialog())
             {
+                dialog.RootFolder = Environment.SpecialFolder.Desktop;
+                dialog.Description = "Selecciona una carpeta que contenga imágenes .jpg";
+                dialog.ShowNewFolderButton = false;
+
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     carpetaSeleccionada = dialog.SelectedPath;

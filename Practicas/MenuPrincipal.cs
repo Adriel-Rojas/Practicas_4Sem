@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practicas.Practica_4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,12 +71,29 @@ namespace Practicas
 
         private void bDSQLToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void bDMySQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pratica4ConcurrenciaNumerosPrimosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HilosConc Frm4 = new HilosConc();
+            Frm4.MdiParent = this;
+            Frm4.Show();
+        }
+
+        private void bDSQLToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             BDsql Frm5 = new BDsql();
             Frm5.MdiParent = this;
             Frm5.Show();
         }
 
-        private void bDMySQLToolStripMenuItem_Click(object sender, EventArgs e)
+        private void bDMySQLToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FBDMySQL Frm6 = new FBDMySQL();
             Frm6.MdiParent = this;
