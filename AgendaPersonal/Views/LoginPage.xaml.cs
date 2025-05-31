@@ -1,13 +1,17 @@
 using System.Threading.Tasks;
+using AgendaPersonal.Datos;
+using AgendaPersonal.Modelos;
 
 namespace AgendaPersonal.Views;
 
 public partial class LoginPage : ContentPage
 {
-	public LoginPage()
+    private readonly RegistroDatabase _database;
+    public LoginPage()
 	{
 		InitializeComponent();
-	}
+        _database = new RegistroDatabase();
+    }
     protected override bool OnBackButtonPressed()
     {
         Application.Current.Quit();
@@ -25,19 +29,45 @@ public partial class LoginPage : ContentPage
 
     private async void LoginButton_Clicked(object sender, EventArgs e)
     {
-        if (IsCredentialCorrect(Username.Text, Password.Text))
+        //if (IsCredentialCorrect(Username.Text, Password.Text))
+        //{
+        //    Username.Text = string.Empty;
+        //    Password.Text = string.Empty;
+        //    Preferences.Set("UsuarioActual", Username.Text.Trim());
+        //    await SecureStorage.SetAsync("hasAuth", "true");
+        //    await Shell.Current.GoToAsync("///main");
+        //}
+        //else
+        //{
+        //    Preferences.Remove("UsuarioActual");
+        //    await DisplayAlert("Acceso fallido", "Usuario o contraseña invalido", "Intente otra vez");
+        //}
+
+        string username = Username.Text?.Trim();
+        string password = Password.Text;
+
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
         {
-            Username.Text = string.Empty;
-            Password.Text = string.Empty;
-            Preferences.Set("UsuarioActual", Username.Text.Trim());
-            await SecureStorage.SetAsync("hasAuth", "true");
-            await Shell.Current.GoToAsync("///main");
+            await DisplayAlert("Error", "Por favor, ingresa nombre de usuario y contraseña", "OK");
+            return;
         }
-        else
+
+        var usuario = await _database.ObtenerUsuarioAsync(username);
+
+        if (usuario == null)
         {
-            Preferences.Remove("UsuarioActual");
-            await DisplayAlert("Acceso fallido", "Usuario o contraseña invalido", "Intente otra vez");
+            await DisplayAlert("Error", "Usuario no encontrado", "OK");
+            return;
         }
+
+        if (usuario.Password != password)
+        {
+            await DisplayAlert("Error", "Contraseña incorrecta", "OK");
+            return;
+        }
+
+        // Login exitoso, navegar a la página principal
+        await Shell.Current.GoToAsync("//main");
     }
 
     //Para que no aparezca menu de 3 rayas

@@ -14,6 +14,8 @@ namespace AgendaPersonal.Modelos
         public string? Nombre { get; set; }
         public string? Telefono { get; set; }
         public string? CorreoElectronico { get; set; }
+
+        public string Password { get; set; }
         public bool Activo { get; set; }
     }
 }
